@@ -30,7 +30,7 @@ def translate(data, opts, classes=None, errors=None, allowErrors=True, skip=None
 
     skips = []
     if not skip is None:
-        skips = skip.split('|')
+        skips = skip.replace('.', '/').split('|')
     print('use skip class', skips)
 
     for cls in dex.classes:
